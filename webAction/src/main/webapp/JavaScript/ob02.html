@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS Object</title>
+<script type="text/javascript">
+	var uprof={
+		name:"OuO",
+		address:"Tainan",
+		age:0999
+	};
+	document.write("---name:" + uprof.name+ "<br/>");
+	document.write("address:" + uprof.address+ "<br/>");
+	document.write("-----age:" + uprof.age+ "<br/>");
+	
+	function baseball(team,pitcher,speed) {
+		this.team= team;
+		this.pitcher= pitcher;
+		this.speed= speed;//新增物件的方法print()對應到printRecord()函數
+		this.print= printRecord;
+	}
+	function printRecord() {
+		document.write("Team:" + this.team+ "<br/>");
+		document.write("Pitcher:" + this.pitcher+ "<br/>");
+		document.write("Speeeeeed:" + this.speed+ "<br/>");
+	}
+
+</script>
+</head>
+<hr>
+<body>
+<script type="text/javascript">
+	var mybass =new baseball("ROC", "OxO...",90);
+	
+	mybass.print();
+
+</script>
+
+</body>
+</html>

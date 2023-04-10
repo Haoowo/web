@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dom</title>
+<script type="text/javascript">
+	function showdominfo(){
+		var tag =document.getElementById("location");
+		//alert('nodeName:' + tag.nodeName+ ' Type: '+ tag.type+ ' Name: '+tag.name+' value: ' +tag.value);	
+		console.log('nodeName:' + tag.nodeName+ ' Type: '+ tag.type+ ' Name: '+tag.name+' value: ' +tag.value);	
+	}
+	function showdomcountinfo(){
+		var tagNodes=document.getElementByTagName("input");
+		console.log("tagNode.length:"+tagNode.length+"\n")
+		
+		var tagname="";
+		for (i=0;i<tagNodes.length;i++){
+			var tagObj=tagNodes.item(i);
+			tagname=tagname + tagObj.type +" ";
+		}
+		console.log("tagnames:"+tagname+"\n");
+	}
+
+</script>
+</head>
+
+<body>
+<p>
+	Address:<input id="location" type="text" name="address" value="Taiwan"/>
+
+</p>
+<input type="button" value="check" onclick="showdominfo()"/>
+<input type="button" value="ok" />
+<input type="button" value="cancel"/>
+<input type="button" value="count" onclick="showdomcountinfo()"/>
+</body>
+</html>
