@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FJU MA Shop</title>
+</head>
+<body>
+<div class="logo text-center">
+    <h1>FJU MA Shop</h1>
+</div>
+
+<div class="wrapper">
+  <div class="inner-warpper text-center">
+    <h2 class="title">帳號設定</h2>
+  
+    <form action="setaccount.do" id="formvalidate">
+      <div class="input-group">
+        <label class="palceholder" for="userName">帳號</label>
+        <input class="form-control" name="userName" id="userName" type="text" placeholder="" />
+        <span class="lighting"></span>
+      </div>
+      <div class="input-group">
+        <label class="palceholder" for="userPassword">確認密碼</label>
+        <input class="form-control" name="userPassword" id="userPassword" type="password" placeholder="" />
+        <span class="lighting"></span>
+      </div>
+
+      <input type="submit" value="修改帳號" name="action"/>
+      <input type="submit" value="刪除帳號" name="action"/>
+      <div class="clearfix supporter">
+        <a class="forgot pull-right" href="#">忘記密碼?</a>
+      </div>
+    </form>
+    
+    <div class="user-actions text-center">
+      
+      <input type="button" value="登出" onclick="logout()" />
+    </div>
+  </div>
+</div>
+
+<script>
+  function deleteAccount() {
+    // 在此處執行刪除帳號的相應操作
+    console.log("執行刪除帳號");
+  }
+
+  function logout() {
+    // 在此處執行登出的相應操作
+    console.log("執行登出");
+  }
+</script>
+
+</body>
+</html>
